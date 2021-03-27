@@ -24,7 +24,7 @@ export default function nestTokens (tokens) {
         break;
       case '/':
         // 出栈 pop()会返回刚刚弹出的项
-        let section_pop = sections.pop()
+        sections.pop()
         // 改变收集器为栈结构队尾 (队尾是栈顶) 那项的下标为2的数组
         collector = sections.length > 0 ? sections[sections.length - 1][2] : nestedTokens
         break;
