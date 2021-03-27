@@ -9,9 +9,9 @@
 // }
 // 那么 lookup(dataObj, 'a.b.c') 结果就是100
 export default function lookup (dataObj, keyName) {
-  console.log(dataObj, keyName)
-  // 看看keyName中有没有点符号
-  if (keyName.indexOf('.') != -1) {
+  // console.log(dataObj, keyName)
+  // 看看keyName中有没有点符号 但是不能是 . 本身
+  if (keyName.indexOf('.') != -1 && keyName != '.') {
     // 如果有点符号 那么拆开
     var keys = keyName.split('.')
     // console.log(keys)

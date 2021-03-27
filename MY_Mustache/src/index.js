@@ -11,5 +11,6 @@ window.Mustache = {
     // 调用renderTemplate函数 让tokens数组变为dom字符串
     var domStr = renderTemplate(tokens, data)
     // console.log(tokens)
+    return domStr
   }
 }
